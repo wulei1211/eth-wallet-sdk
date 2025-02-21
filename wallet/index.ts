@@ -152,6 +152,7 @@ export function ethSign(params:any) {
     }
     const privateKeyBuffer = Buffer.from(privateKey, "hex");
     // signedTx签名之后给vrs赋值
+    // 所以eth_sendRawTransaction，发送的参数是交易的完整数据+签名信息
     const signedTx = tx.sign(privateKeyBuffer);
     const serializedTx = signedTx.serialize();
     if (!serializedTx) {
