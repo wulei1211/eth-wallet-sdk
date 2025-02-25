@@ -4,9 +4,10 @@ import { generateMnemonic, mnemonicToSeed } from "../wallet/bip/bip"
 
 describe("eth wallet test", () => {
     test("create address", () => {
-        const mnemonic = "attend control tragic rough possible you coral jelly earn fringe bullet loop";
+        const mnemonic = "immense insane round judge visit yard person fat twist elephant agree fiscal";
+        // const mnemonic = "attend control tragic rough possible you coral jelly earn fringe bullet loop";
         const seed = mnemonicToSeed( { mnemonic: mnemonic, password: '' });
-        const addressInfo = createAddress(seed.toString('hex'), "0")
+        const addressInfo = createAddress(seed.toString('hex'), "2")
         // {"privateKey":"0xc30e09a462d429803c0592db0c52a9cb0bdcbf80fb6cfe3ea351c9fd67e103c1","publicKey":"0x0332950879b045701d360b60272cd98de440f269f73c5d29d23302d89cfbd3a1a5","address":"0xee2E207D30383430a815390431298EBa3c1C8c2d"}
         console.log(addressInfo)
     })
